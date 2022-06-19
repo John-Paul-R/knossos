@@ -141,16 +141,21 @@
 				<b>{$t('settings.username.text')}</b>
 				<TextInput
 					placeholder={$t('settings.username.placeholder')}
-					bind:value={modifiedUser.username} />
+					bind:value={modifiedUser.username}
+					fill />
 
 				<b>{$t('settings.bio.text')}</b>
 				<TextInput
 					multiline
 					placeholder={$t('settings.bio.placeholder')}
-					bind:value={modifiedUser.bio} />
+					bind:value={modifiedUser.bio}
+					fill />
 
-				<p>{$t('settings.email.text')}</p>
-				<TextInput placeholder={$t('settings.email.placeholder')} bind:value={modifiedUser.email} />
+				<span>{@html $t('settings.email.text')}</span>
+				<TextInput
+					placeholder={$t('settings.email.placeholder')}
+					bind:value={modifiedUser.email}
+					fill />
 
 				<Button><IconUpload /> {$t('settings.avatar')}</Button>
 			{:else}
